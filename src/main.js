@@ -1,4 +1,7 @@
 import * as Vue from 'vue';
 import App from '~/App';
+import store from '~/store';
 
-Vue.createApp(App).mount('#app');
+const app = Vue.createApp(App)
+app.use(store);
+app.mount('#app');

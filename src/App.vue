@@ -1,7 +1,11 @@
 <template>
-    <h1>{{ msg }}</h1>
-    <button @click="msg += '!'">Click!</button>
-    <Button></Button>
+    <header>
+        <RouterLink to="/">Home..</RouterLink>
+        <RouterLink to="/about">About..</RouterLink>
+    </header>
+    <section>
+        <RouterView></RouterView>
+    </section>
 </template>
 <script>
 import Button from '~/components/Button';
@@ -14,12 +18,21 @@ export default {
         return {
             msg: 'Hello Vue!'
         }
-    }
+    },
 }
 </script>
-<style lang="scss">
-$color: red;
-h1 {
-    color: $color;
+<style lang="scss" scoped>
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+section {
+    margin-top: 80px;
 }
 </style>
